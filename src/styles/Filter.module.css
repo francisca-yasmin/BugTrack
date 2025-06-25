@@ -1,8 +1,38 @@
-.filtro{
-    display: flex;
-    justify-content: center;
+.filtrosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filtro {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f2f2f2;
+  min-width: 120px;
+}
+
+.search {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f2f2f2;
+  min-width: 200px;
+}
+
+/* responsivo para telas pequenas */
+@media (max-width: 500px) {
+  .filtro,
+  .search {
+    width: 100%;
+  }
+
+  .filtrosContainer {
+    flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    height: 20px;
-    width: 100px;
+  }
 }
