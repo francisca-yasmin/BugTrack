@@ -1,18 +1,19 @@
 // assets/pages/Home.jsx
 import React, { useEffect, useState } from "react";
-import Card from "../components/Card";
-import Filter from "../components/Filter";
-import estilo from '../styles/Home.module.css';
+import Card from "../components/Card"; //import de card para mostrar o pokemon
+import Filter from "../components/Filter"; // componente que filtra os pokemons
+import estilo from '../styles/Home.module.css'; //css da pagina home
 
 const Home = () => {
-  const [pokemons, setPokemons] = useState([]);
+  //estado que pega os pokemons, filtros e os tipos de pokemons
+  const [pokemons, setPokemons] = useState([]); 
   const [filtered, setFiltered] = useState([]);
   const [types, setTypes] = useState([]);
   const [selectedType, setSelectedType] = useState("all");
 
   useEffect(() => {
     const fetchPokemons = async () => {
-      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=150");
+      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=150"); //api de pokemon com limite de 150 pokemons para carregar
       const data = await res.json();
       const details = await Promise.all(
         data.results.map(async (p) => {
@@ -26,7 +27,7 @@ const Home = () => {
       setTypes([...allTypes]);
     };
 
-    fetchPokemons();
+    fetchPokemons(); //chama minha função
   }, []);
 
   useEffect(() => {

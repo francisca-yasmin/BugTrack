@@ -1,7 +1,8 @@
 
 import React from "react";
-import estilo from "../styles/Card.module.css";
+import estilo from "../styles/Card.module.css"; //importa o css do card
 
+//componente de card para receber o pokemon
 const Card = ({ pokemon }) => {
   return (
     <div className={estilo.card}>
