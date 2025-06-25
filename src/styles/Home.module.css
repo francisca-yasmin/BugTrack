@@ -1,0 +1,20 @@
+.pokemon_list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
+  gap: 16px; /* espaçamento entre os cards */
+  padding: 16px;
+}
+
+.pokemon-list > * {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.pokemon-list > *:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}

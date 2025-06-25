@@ -1,0 +1,36 @@
+.card {
+  background-color: #f0f4f8;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  text-transform: capitalize;
+}
